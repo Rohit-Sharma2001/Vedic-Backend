@@ -1,0 +1,344 @@
+{
+  "info": {
+    "name": "yoga and event module apis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "13b9d8b3-2a6a-4d3a-8a1e-6f2f81b6f4b9"
+  },
+  "item": [
+    {
+      "name": "Event Management",
+      "item": [
+        {
+          "name": "Add Event",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJldmVudG5hbWUiOiJZb2dhIFJldHJlYXQiLCJkYXRlIjoiMjAyNS0xMi0wMSIsImxvY2F0aW9uIjoiUHVuZSIsInByaWNlIjo0OTk5LCJzdGF0dXMiOiJhY3RpdmUiLCJkZXNjcmlwdGlvbiI6IldlZWtlbmQgcmV0cmVhdCJ9" },
+                { "key": "file", "type": "file", "src": [] },
+                { "key": "coverImage", "type": "file", "src": [] },
+                { "key": "icon_file", "type": "file", "src": [] }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/add",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "add"]
+            }
+          }
+        },
+        {
+          "name": "List Events (paginated)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTAsImV2ZW50bmFtZSI6IiIsImFsbCI6ZmFsc2V9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/all",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "all"]
+            }
+          }
+        },
+        {
+          "name": "View Event by ID",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4OWFiYyJ9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/view",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "view"]
+            }
+          }
+        },
+        {
+          "name": "Update Event (by :id)",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJldmVudG5hbWUiOiJVcGRhdGVkIE5hbWUifQ==" },
+                { "key": "file", "type": "file", "src": [] },
+                { "key": "coverImage", "type": "file", "src": [] },
+                { "key": "icon_file", "type": "file", "src": [] }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/update/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "update", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Delete Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4OWFiYyJ9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/delete",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "delete"]
+            }
+          }
+        },
+        {
+          "name": "Toggle Status",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4OWFiYyJ9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/update-status",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "update-status"]
+            }
+          }
+        },
+        {
+          "name": "Create Event Payment Link",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJldmVudElkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgwMDEiLCJxdWFudGl0eSI6MiwidXNlcklkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgwMDIifQ==\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/createEventPayment",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "createEventPayment"]
+            }
+          }
+        },
+        {
+          "name": "Event Payment Success (path param)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/event_management/eventPaymentSuccess/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "eventPaymentSuccess", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Event Payment Success (query)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/event_management/eventPaymentSuccess?session_id=",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "eventPaymentSuccess"],
+              "query": [
+                { "key": "session_id", "value": "" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Event Bookings",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/getAllEventBookings",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "getAllEventBookings"]
+            }
+          }
+        },
+        {
+          "name": "Get Event Bookings By Event ID",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJldmVudElkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgwMDEifQ==\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/getEventBookingsByEventId",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "getEventBookingsByEventId"]
+            }
+          }
+        },
+        {
+          "name": "Get Tickets Booked For Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJldmVudElkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgwMDEifQ==\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/getTicketsBookedForEvent",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "getTicketsBookedForEvent"]
+            }
+          }
+        },
+        {
+          "name": "Create Event RSVP",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJldmVudElkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgwMDEiLCJ1c2VySWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODAwMiIsInF1YW50aXR5IjoyfQ==\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event_management/createEventRSVP",
+              "host": ["{{baseUrl}}"],
+              "path": ["event_management", "createEventRSVP"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Yoga Videos",
+      "item": [
+        {
+          "name": "Add Yoga Video",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJ0aXRsZSI6Ik1vcm5pbmcgRmxvdyIsImNhdGVnb3J5SWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODEwMSIsImVtcGxveWVlSWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODEwMiIsImxldmVsSWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODEwMyIsImR1cmF0aW9uIjozMH0=" },
+                { "key": "coverImage", "type": "file", "src": [] }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/yoga_videos/addYogaVideo",
+              "host": ["{{baseUrl}}"],
+              "path": ["yoga_videos", "addYogaVideo"]
+            }
+          }
+        },
+        {
+          "name": "Get All Yoga Videos",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/yoga_videos/getAll",
+              "host": ["{{baseUrl}}"],
+              "path": ["yoga_videos", "getAll"]
+            }
+          }
+        },
+        {
+          "name": "Find By Category and Video IDs",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJjYXRlZ29yeUlkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgxMDEiLCJ2aWRlb0lkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgyMDEiLCJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/yoga_videos/findById",
+              "host": ["{{baseUrl}}"],
+              "path": ["yoga_videos", "findById"]
+            }
+          }
+        },
+        {
+          "name": "Find Yoga Video By ID",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJ2aWRlb0lkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgyMDEiLCJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/yoga_videos/findYogaVideoById",
+              "host": ["{{baseUrl}}"],
+              "path": ["yoga_videos", "findYogaVideoById"]
+            }
+          }
+        },
+        {
+          "name": "Update Video Details (by :id)",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJ0aXRsZSI6Ik1vcm5pbmcgRmxvdyBBZHZhbmNlZCIsImxldmVsSWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODEwNCJ9" },
+                { "key": "coverImage", "type": "file", "src": [] }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/yoga_videos/updateVideoDetails/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["yoga_videos", "updateVideoDetails", ":id"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
+

@@ -1,0 +1,190 @@
+{
+  "info": {
+    "name": "course, membership, membership-buy api collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "a2b8f6d1-0a0d-4a9b-9d1b-112233445566"
+  },
+  "item": [
+    {
+      "name": "Course Management",
+      "item": [
+        {
+          "name": "Add Course",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJ0aXRsZSI6IkJlZ2lubmVyIFlvZ2EgQ291cnNlIiwiY2F0ZWdvcnlJZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4MTExMSIsImxlYXJuaW5ncyI6W3sidGl0bGUiOiJCcmVhdGggY29udHJvbCJ9LHsidGl0bGUiOiJCYXNpYyBwb3N0dXJlcyJ9XSwiY291cnNlQ29udGVudCI6W3sic2VjdGlvblRpdGxlIjoiSW50cm8iLCJsZWN0dXJlcyI6W3sidHlwZSI6InZpZGVvIiwidGl0bGUiOiJXZWxjb21lIiwidmlkZW9DYXRlZ29yeUlkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgxMjIyIiwidmlkZW9JZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4MTMzMyJ9XX0seyJzZWN0aW9uVGl0bGUiOiJCYXNpY3MiLCJsZWN0dXJlcyI6W3sidHlwZSI6ImRvY3VtZW50IiwidGl0bGUiOiJTYWZldHkiLCJkb2N1bWVudElkIjoiNjRiOGZhZTVjMmExYjIzNDU2NzgxNDQ0In1dfV19" },
+                { "key": "icon_file", "type": "file", "src": [] }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/course_management/add", "host": ["{{baseUrl}}"], "path": ["course_management","add"] }
+          }
+        },
+        {
+          "name": "Get All Courses",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}" },
+            "url": { "raw": "{{baseUrl}}/course_management/getAll", "host": ["{{baseUrl}}"], "path": ["course_management","getAll"] }
+          }
+        },
+        {
+          "name": "Get Course By ID",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJfaWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODk5OTkifQ==\"\n}" },
+            "url": { "raw": "{{baseUrl}}/course_management/getById", "host": ["{{baseUrl}}"], "path": ["course_management","getById"] }
+          }
+        },
+        {
+          "name": "Update Course (by :id)",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJ0aXRsZSI6IkJlZ2lubmVyIFlvZ2EgQ291cnNlIC0gdjIifQ==" },
+                { "key": "icon_file", "type": "file", "src": [] }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/course_management/update/:id", "host": ["{{baseUrl}}"], "path": ["course_management","update",":id"] }
+          }
+        },
+        {
+          "name": "Delete Course",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJfaWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODk5OTkifQ==\"\n}" },
+            "url": { "raw": "{{baseUrl}}/course_management/delete", "host": ["{{baseUrl}}"], "path": ["course_management","delete"] }
+          }
+        },
+        {
+          "name": "Toggle Course Status",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJfaWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3ODk5OTkifQ==\"\n}" },
+            "url": { "raw": "{{baseUrl}}/course_management/toggleStatus", "host": ["{{baseUrl}}"], "path": ["course_management","toggleStatus"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Membership Management",
+      "item": [
+        {
+          "name": "Add Membership Plan",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJuYW1lIjoiR29sZCBQbGFuIiwicHJpY2UiOjE5OTksImR1cmF0aW9uRGF5cyI6OTAsImRlc2NyaXB0aW9uIjoiUXVhcnRlcmx5IG1lbWJlcnNoaXAifQ==" },
+                { "key": "image", "type": "file", "src": [] }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/membership_management/add", "host": ["{{baseUrl}}"], "path": ["membership_management","add"] }
+          }
+        },
+        {
+          "name": "Get All Membership Plans",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_management/getAll", "host": ["{{baseUrl}}"], "path": ["membership_management","getAll"] }
+          }
+        },
+        {
+          "name": "View Membership Plan",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4YWFhYSJ9\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_management/view", "host": ["{{baseUrl}}"], "path": ["membership_management","view"] }
+          }
+        },
+        {
+          "name": "Update Membership Plan (by :id)",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "data", "type": "text", "value": "eyJuYW1lIjoiR29sZCBQbGFuIFBsdXMiLCJwcmljZSI6MjQ5OX0=" },
+                { "key": "image", "type": "file", "src": [] }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/membership_management/update/:id", "host": ["{{baseUrl}}"], "path": ["membership_management","update",":id"] }
+          }
+        },
+        {
+          "name": "Delete Membership Plan",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4YWFhYSJ9\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_management/delete", "host": ["{{baseUrl}}"], "path": ["membership_management","delete"] }
+          }
+        },
+        {
+          "name": "Toggle Membership Plan Status",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4YWFhYSJ9\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_management/toggle-status", "host": ["{{baseUrl}}"], "path": ["membership_management","toggle-status"] }
+          }
+        },
+        {
+          "name": "Set Best Value",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJpZCI6IjY0YjhmYWU1YzJhMWIyMzQ1Njc4YWFhYSJ9\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_management/set-bestvalue", "host": ["{{baseUrl}}"], "path": ["membership_management","set-bestvalue"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Membership Buy Management",
+      "item": [
+        {
+          "name": "Create Payment Link",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJwbGFuSWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3OGFhYWEiLCJ1c2VySWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3OGJiYmIiLCJxdWFudGl0eSI6MX0=\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_buy_management/paymentLink", "host": ["{{baseUrl}}"], "path": ["membership_buy_management","paymentLink"] }
+          }
+        },
+        {
+          "name": "Payment Success (path param)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/membership_buy_management/paymentSuccess/:id", "host": ["{{baseUrl}}"], "path": ["membership_buy_management","paymentSuccess",":id"] }
+          }
+        },
+        {
+          "name": "Membership Transactions",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTAsInVzZXJfaWQiOiI2NGI4ZmFlNWMyYTFiMjM0NTY3OGJiYmIifQ==\"\n}" },
+            "url": { "raw": "{{baseUrl}}/membership_buy_management/membership_transactions", "host": ["{{baseUrl}}"], "path": ["membership_buy_management","membership_transactions"] }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" }
+  ]
+}
+

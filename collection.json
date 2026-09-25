@@ -1,0 +1,2016 @@
+{
+  "info": {
+    "name": "Vedic APIs",
+    "_postman_id": "c5e5a3b0-99c8-4e9b-91d6-2b3e6a3c7d44",
+    "description": "Combined Postman collection for AddOns and Appointment Management APIs (NestJS)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "AddOns API",
+      "item": [
+        {
+          "name": "Create AddOn",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"ewogICJuYW1lIjogIkV4dHJhIENvbnN1bHRhdGlvbiIsCiAgInByaWNlIjogMTAwLAogICJkdXJhdGlvbiI6ICIzMCBtaW5zIiwKICAibm90ZSI6ICJBREQgY29uc3VsdGF0aW9uIHRpbWUiCn0=\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/add_ons/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["add_ons", "add"]
+            }
+          }
+        },
+        {
+          "name": "Get All AddOns",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": {
+              "raw": "http://localhost:3008/add_ons/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["add_ons", "all"]
+            }
+          }
+        },
+        {
+          "name": "Delete AddOn",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"ewogICJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/add_ons/delete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["add_ons", "delete"]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Appointment Management API",
+      "item": [
+        {
+          "name": "Add Appointment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJhcHBvaW50bWVudHMiOlt7InNlcnZpY2VJZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiIsImVtcGxveWVlSWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjAiLCJ1c2VySWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjEiLCJub3RlIjogIkdlbmVyYWwgY29uc3VsdGF0aW9uIiwiZGF0ZSI6ICIyMDI1LTA5LTIyIiwidGltZSI6ICIxMDowMCIsImR1cmF0aW9uIjogMzAsInByaWNlIjogMTAwfV19\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "add"]
+            }
+          }
+        },
+        {
+          "name": "Find Appointments",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJlbXBsb3llZUlkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDYwIn0=\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/find",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "find"]
+            }
+          }
+        },
+        {
+          "name": "Check Available Slot",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJzbG90c1BheWxvYWQiOlt7InNlcnZpY2VJZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiIsImVtcGxveWVlSWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjAiLCJ1c2VySWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjEiLCJkYXRlIjogIjIwMjUtMDktMjIifV19\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/checkAvailableSlot",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "checkAvailableSlot"]
+            }
+          }
+        },
+        {
+          "name": "Get Unavailable Dates In Month",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJzbG90c1BheWxvYWQiOlt7InNlcnZpY2VJZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiIsImVtcGxveWVlSWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjAiLCJ1c2VySWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjEiLCJkYXRlIjogIjIwMjUtMDktMjIifV19\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/getUnavailableDatesInMonth",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "getUnavailableDatesInMonth"]
+            }
+          }
+        },
+        {
+          "name": "Appointment Payment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA2MiIsInByaWNlIjogMTAwfQ==\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/appointmentPayment",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "appointmentPayment"]
+            }
+          }
+        },
+        {
+          "name": "Payment Success",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/paymentSuccess/650f7d8d9a3e1b1234567890",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "paymentSuccess", "650f7d8d9a3e1b1234567890"]
+            }
+          }
+        },
+        {
+          "name": "Find By User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJfaWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjMifQ==\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/findByUser",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "findByUser"]
+            }
+          }
+        },
+        {
+          "name": "Edit Appointment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJfaWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjQiLCJub3RlIjogIlVwZGF0ZWQgY29uc3VsdGF0aW9uIG5vdGUifQ==\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/editAppointments",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "editAppointments"]
+            }
+          }
+        },
+        {
+          "name": "Employee Non Working Dates",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJzbG90c1BheWxvYWQiOlt7ImVtcGxveWVlSWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNjAiLCJzdGFydERhdGUiOiAiMjAyNS0wOS0wMSIsImVuZERhdGUiOiAiMjAyNS0wOS0zMCJ9XX0=\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/employeeNonWorkingDates",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "employeeNonWorkingDates"]
+            }
+          }
+        },
+        {
+          "name": "Add Break",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": \"eyJlbXBsb3llZUlkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDYwIiwidXNlcklkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDYxIiwiZGF0ZSI6ICIyMDI1LTA5LTIyIiwidGltZSI6ICIxMzowMCIsImR1cmF0aW9uIjogMzB9\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3008/appointment-management/addBreak",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3008",
+              "path": ["appointment-management", "addBreak"]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+     "name": "Cart Management API",
+  "item": [
+    {
+      "name": "Add to Cart",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwcm9kdWN0SWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNTAiLCAidXNlcklkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDUxIiwgInF1YW50aXR5IjogMn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/cart_management/addCart",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["cart_management", "addCart"]
+        }
+      }
+    },
+    {
+      "name": "Find User Cart",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VyIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDUxIiwgInBhZ2UiOiAxLCAicGFnZVNpemUiOiAxMH0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/cart_management/findUserCart",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["cart_management", "findUserCart"]
+        }
+      }
+    },
+    {
+      "name": "Delete Cart Item",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1MiIsICJ1c2VyX2lkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDUxIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/cart_management/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["cart_management", "delete"]
+        }
+      }
+    },
+    {
+      "name": "Select Items",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZHMiOlsiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNTMiLCAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNTQiXSwgInVzZXIiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNTEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/cart_management/selectItems",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["cart_management", "selectItems"]
+        }
+      }
+    },
+    {
+      "name": "Find Cart Count",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VyIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDUxIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/cart_management/findCartCount",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["cart_management", "findCartCount"]
+        }
+      }
+    }
+  ]
+},
+
+{
+  "name": "Center Management API",
+  "item": [
+    {
+      "name": "Add Center",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjZW50ZXJOYW1lIjogIlZlZGljIFRlc3QgQ2VudGVyIiwgImFkZHJlc3MiOiAiMTIzIFZlZGljIFN0cmVldCIsICJjaXR5IjogIkphaXB1ciIsICJzdGF0ZSI6ICJKYXlwYW4iLCAiY291bnRyeSI6ICJJbmRpYSIsICJwaW5jb2RlIjogIjMwMDAxIiwgIm1vYmlsZSI6ICI5ODc2NTQzMjEwIiwgImVtYWlsIjogInRlc3RAZXhhbXBsZS5jb20iLCAibGF0aXR1ZGUiOiAiMjcuMTc1IiwgImxvbmdpdHVkZSI6ICI3OC40MjUifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center_management/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center_management", "add"]
+        }
+      }
+    },
+    {
+      "name": "Get All Centers (Paginated)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwYWdlIjogMSwicGFnZVNpemUiOjEwfQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center_management/allCenterManagement",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center_management", "allCenterManagement"]
+        }
+      }
+    },
+    {
+      "name": "Get All Centers (No Pagination)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJhbGwiOiAidHJ1ZSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center_management/allCenterManagement",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center_management", "allCenterManagement"]
+        }
+      }
+    },
+    {
+      "name": "View Center By ID",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1NSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center_management/view",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center_management", "view"]
+        }
+      }
+    },
+    {
+      "name": "Update Center",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjZW50ZXJOYW1lIjogIlVwZGF0ZWQgVmVkaWMgQ2VudGVyIiwgImNpdHkiOiAiTmV3IERlbGhpIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center_management/update/650f7d8d9a3e1b1234567890",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center_management", "update", "650f7d8d9a3e1b1234567890"]
+        }
+      }
+    },
+    {
+      "name": "Delete Center",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1NSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center_management/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center_management", "delete"]
+        }
+      }
+    }
+  ]
+},
+
+{
+  "name": "Center Resources API",
+  "item": [
+    {
+      "name": "Add Center Resource",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJuYW1lIjogIlByb2plY3RvciIsICJjZW50ZXJJZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center-resources/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center-resources", "add"]
+        }
+      }
+    },
+    {
+      "name": "Find Center Resources by CenterId",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjZW50ZXJJZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center-resources/find",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center-resources", "find"]
+        }
+      }
+    },
+    {
+      "name": "Delete Center Resource",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/center-resources/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["center-resources", "delete"]
+        }
+      }
+    }
+  ]
+},
+
+{
+  "name": "Coupon API",
+  "item": [
+    {
+      "name": "Add Coupon",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ0aXRsZSI6ICJTdW1tZXIgU2FsZSIsICJjb3Vwb25Db2RlIjogIlNVTVIxMCIsICJkaXNjb3VudFR5cGUiOiAiUGVyY2VudCIsICJkaXNjb3VudFZhbHVlIjogMTAwLCAidGhyZXNob2xkQW1vdW50IjogMTAwMCwgIm1heERpc2NvdW50IjogMjAwLCAidG90YWxVc2VyTGltaXQiOiA1MCwicGVyVXNlckxpbWl0IjogMSwic3RhcnREYXRlVGltZSI6ICIyMDI1LTA5LTAxIiwgImV4cGlyeURhdGUiOiAiMjAyNS0xMi0zMSIsICJhcHBsaWNhYmxlVG8iOiAiYWxsIiwgImRlc2NyaXB0aW9uIjogIlN1bW1lciBzYWxlIGRpc2NvdW50IGNhbXBhaWduIiwgImN1c3RvbWVyVHlwZSI6ICJuZXciIH0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/Coupon/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["Coupon", "add"]
+        }
+      }
+    },
+    {
+      "name": "Get All Coupons",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwYWdlIjogMSwicGFnZVNpemUiOjEwLCJ0aXRsZSI6ICJTdW1tZXIifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/Coupon/allCoupons",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["Coupon", "allCoupons"]
+        }
+      }
+    },
+    {
+      "name": "View Coupon by ID",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/Coupon/view",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["Coupon", "view"]
+        }
+      }
+    },
+    {
+      "name": "Update Coupon",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJfaWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNWYiLCAidGl0bGUiOiAiVXBkYXRlZCBTdW1tZXIgU2FsZSIsICJkaXNjb3VudFZhbHVlIjogMTUwIH0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/Coupon/update",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["Coupon", "update"]
+        }
+      }
+    },
+    {
+      "name": "Delete Coupon",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTA1ZiJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/Coupon/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["Coupon", "delete"]
+        }
+      }
+    },
+    {
+      "name": "Apply Coupon",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjb3Vwb25Db2RlIjogIlNVTVIxMCJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/Coupon/applyCoupon",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["Coupon", "applyCoupon"]
+        }
+      }
+    }
+  ]
+},
+
+{
+  "name": "Employee Management API",
+  "item": [
+    {
+      "name": "Add Employee",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6ICJqb2huQGV4YW1wbGUuY29tIiwgIm1vYmlsZU5vIjogIjk4NzY1NDMyMTAiLCAicGFzc3dvcmQiOiAiUGFzc3dvcmRAMTIzIiwgInNlcnZpY2VzIjogWyI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTAxYSJdLCAiY2VudGVySWQiOiBbIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDFiIl0sICJzYWxhcnkiOiA1MDAwLCAid29ya2luZ19kYXlzIjogWyJNb25kYXkiLCAiVHVlc2RheSJdLCAid29ya2luZ190aW1lX3N0YXJ0IjogIjA5OjAwIiwgIndvcmtpbmdfdGltZV9lbmQiOiAiMTc6MDAiLCAic2tpbGxzIjogWyJSZWlraSIsICJQcmFuYXlhbWEiXX0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-management/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-management", "add"]
+        }
+      }
+    },
+    {
+      "name": "Find All Employees",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"e30=\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-management/findAll",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-management", "findAll"]
+        }
+      }
+    },
+    {
+      "name": "Find Employee By ID",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTAxZCJ9\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-management/findById",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-management", "findById"]
+        }
+      }
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"eyJpZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTAxZCJ9\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-management/deleteEmployee",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-management", "deleteEmployee"]
+        }
+      }
+    },
+    {
+      "name": "Edit Employee",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"eyJfaWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwMWQiLCAic2FsYXJ5IjogNjAwMCwgInNraWxscyI6IFsiQXVyb3ZhZGljIEhlYWxpbmciXX0=\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-management/editEmployee",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-management", "editEmployee"]
+        }
+      }
+    }
+  ]
+},
+
+{
+  "name": "Employee Review API",
+  "item": [
+    {
+      "name": "Add Employee Review",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VyX2lkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDBhIiwgImVtcGxveWVlX2lkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDBiIiwgIm92ZXJhbGxfcmV2aWV3IjogNCwicHVuY3R1YWxpdHkiOiA1LCJ2YWx1ZSI6IDQsInNlcnZpY2UiOiA1LCJjb21tZW50IjogIlZlcnkgcHJvZmVzc2lvbmFsIGFuZCBwb2xpZSBzdGFmZiEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-review/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-review", "add"]
+        }
+      }
+    },
+    {
+      "name": "Get Reviews By Employee ID",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"eyJlbXBsb3llZV9pZCI6ICI2NTBmN2Q4ZDlhM2UxYjEyMzQ1Njc4OTAwYiJ9\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-review/by-employee",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-review", "by-employee"]
+        }
+      }
+    },
+    {
+      "name": "Get Reviews By User ID",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"eyJ1c2VyX2lkIjogIjY1MGY3ZDhkOWEzZTFiMTIzNDU2Nzg5MDBhIn0=\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-review/by-user",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-review", "by-user"]
+        }
+      }
+    },
+    {
+      "name": "Get All Reviews",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"e30=\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-review/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-review", "all"]
+        }
+      }
+    },
+    {
+      "name": "Get Ratings Distribution",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"data\": \"e30=\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3008/employee-review/distribution/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["employee-review", "distribution", "all"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "Product (Inventory)",
+  "item": [
+    {
+      "name": "Add Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJwcm9kdWN0TmFtZSI6IlRlc3QgUHJvZHVjdCIsInRpdGxlIjoiVGVzdCBUaXRsZSIsInNrdV9pZCI6IlNLSUQxMjMiLCJidXlfb25lX2dldF9vbmUiOnRydWUsImJyYW5kIjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkYSIsImNhdGVnb3J5IjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkYiIsInN1YkNhdGVnb3J5IjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkYyIsIml0ZW1UeXBlIjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkZCIsImluZ3JlZGllbnRzIjpbIjY3ZjA3ZWY5MzI5MDlmMDg1MGY1NGJiZGUiXSwicHJpY2UiOjEwMCwibXJwIjoxMTAsImNvc3QiOjk1LCJkaXNjb3VudGVkX3ByaWNlIjo5MCwic3RvY2siOjEwLCJidXlfY291bnQiOjAsIm1pbk9yZGVyUXVhbnRpdHkiOjEsIm1heE9yZGVyUXVhbnRpdHkiOjEwLCJwcm9kdWN0X2Rlc2NyaXB0aW9uIjoiVGVzdCBwcm9kdWN0IGRlc2MiLCJ3ZWlnaHQiOjEsImxlbmd0aCI6IjEyIiwid2lkdGgiOiIxMCIsImhlaWdodCI6IjgiLCJpbnZlbnRvcnlfc3RhdHVzIjowLCJpc19kZWxldGVkIjowLCJkYXRlIjoiMjAyNS0wOS0yMVQxMjowMDowMC4wMDBaIiwibW9kaWZpZWQiOiIyMDI1LTA5LTIxVDEyOjAwOjAwLjAwMFoifQ==",
+              "type": "text"
+            },
+            {
+              "key": "coverImage",
+              "type": "file",
+              "src": ""
+            },
+            {
+              "key": "additionalImages",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "add"]
+        }
+      }
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/allProducts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "allProducts"]
+        }
+      }
+    },
+    {
+      "name": "View Product by ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"data\": \"eyJpZCI6ICI2N2YwN2U5ZjI5MDlmMDg1MGY1NGJiZGEifQ==\" \n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/view",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "view"]
+        }
+      }
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJfcmlkIjoiNjdmMDdlOWYyOTA5ZjA4NTBmNTRiYmRhIiwicHJvZHVjdE5hbWUiOiJVcGRhdGVkIFByb2R1Y3QiLCJ0aXRsZSI6IlVwZGF0ZWQgVGl0bGUiLCJza3VfaWQiOiJVUERSMTAwMSIsImJyYW5kIjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkYSIsImNhdGVnb3J5IjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkYiIsInN1YkNhdGVnb3J5IjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkYyIsIml0ZW1UeXBlIjoiNjdmMDdlZjkzMjkwOWYwODUwZjU0YmJkZCIsImluZ3JlZGllbnRzIjpbIjY3ZjA3ZWY5MzI5MDlmMDg1MGY1NGJiZGUiXSwicHJpY2UiOjEyNSwibXJwIjoxMzAsImNvc3QiOjEwMCwiZGlzY291bnRlZF9wcmljZSI6MTAwLCJzdG9jayI6MjAsImJ1eV9jb3VudCI6NSwibWluT3JkZXJRdWFudGl0eSI6MiwibWF4T3JkZXJRdWFudGl0eSI6MTUsInByb2R1Y3RfZGVzY3JpcHRpb24iOiJVcGRhdGVkIHByb2R1Y3Qgc2FtcGxlIiwid2VpZ2h0IjoyLCJsZW5ndGgiOiIxNCIsIndpZHRoIjoiMTEiLCJoZWlnaHQiOiI5IiwiaW52ZW50b3J5X3N0YXR1cyI6MSwibW9kaWZpZWQiOiIyMDI1LTA5LTIxVDEyOjAwOjAwLjAwMFoifQ==",
+              "type": "text"
+            },
+            {
+              "key": "coverImage",
+              "type": "file",
+              "src": ""
+            },
+            {
+              "key": "additionalImages",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/update/67f07e9f2909f0850f54bbda",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "update", "67f07e9f2909f0850f54bbda"]
+        }
+      }
+    },
+    {
+      "name": "Delete Product (Soft Delete)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"data\": \"eyJpZCI6ICI2N2YwN2U5ZjI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/deleteProduct",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "deleteProduct"]
+        }
+      }
+    },
+    {
+      "name": "Get Products By Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/product/by-categories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "by-categories"]
+        }
+      }
+    },
+    {
+      "name": "Add Review",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJ1c2VyX2lkIjoiNjdmMDdlOWYyOTA5ZjA4NTBmNTRiYmRhIiwicHJvZHVjdF9pZCI6IjY3ZjA3ZTlmMjkwOWYwODUwZjU0YmJkYSIsInJldmlldyI6IlRoaXMgaXMgYSB0ZXN0IHJldmlldyIsInJhdGluZyI6NH0=",
+              "type": "text"
+            },
+            {
+              "key": "additionalImages",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/add-review",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "add-review"]
+        }
+      }
+    },
+    {
+      "name": "Get Reviews (Paginated)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwcm9kdWN0X2lkIjoiNjdmMDdlOWYyOTA5ZjA4NTBmNTRiYmJkYSIsInBhZ2UiOjEsImxpbWl0IjoxMH0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/get-reviews",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "get-reviews"]
+        }
+      }
+    },
+    {
+      "name": "Get Review Rating (Summary)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwcm9kdWN0X2lkIjoiNjdmMDdlOWYyOTA5ZjA4NTBmNTRiYmJkYSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/getReviewRating",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "getReviewRating"]
+        }
+      }
+    },
+    {
+      "name": "Delete Product Image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpbWFnZU5hbWUiOiAidXBsb2Fkcy9pbWFnZXMvdGVzdC5qcGciLCAicHJvZHVjdElkIjogIjY3ZjA3ZTlmMjkwOWYwODUwZjU0YmJkYSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/delete-image",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "delete-image"]
+        }
+      }
+    },
+    {
+      "name": "Bulk Upload Products",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/product/bulk-upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "bulk-upload"]
+        }
+      }
+    },
+    {
+      "name": "Update All Product MRP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/product/updateAllMrp",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["product", "updateAllMrp"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "Master",
+  "item": [
+    {
+      "name": "Add Master (Category/Brand/Subcategory)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJuYW1lIjoiVGVzdCBDYXRlZ29yeSIsIm9yZGVyIjoxLCJkZXNjcmlwdGlvbiI6IlRlc3QgY2F0ZWdvcnkgZGVzY3JpcHRpb24iLCJkcm9wZG93bl90eXBlIjoiY2F0ZWdvcnkiLCJjYXRlZ29yeV9pZCI6IjY3ZjBhMDAwMjkwOWYwODUwZjU0YmJkYSIsImlzX2RlbGV0ZWQiOjAsInN0YXR1cyI6MSwiZGF0ZSI6IjIwMjUtMDktMjFUMDA6MDA6MDAuMDAwWiIsIm1vZGlmaWVkIjoiMjAyNS0wOS0yMVQwMDowMDowMC4wMDBaIn0=",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            },
+            {
+              "key": "icon_file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "add"]
+        }
+      }
+    },
+    {
+      "name": "Add Subscription (Email)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20ifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/add-suscribe",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "add-suscribe"]
+        }
+      }
+    },
+    {
+      "name": "Get All Master Data (Paginated)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTAsImRyb3Bkb3duX3R5cGUiOiJjYXRlZ29yeSIsImNhdGVnb3J5X2lkIjoiNjdmMGEwMDAyOTA5ZjA4NTBmNTRiYmRhIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/allData",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "allData"]
+        }
+      }
+    },
+    {
+      "name": "View Master by ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6IjY3ZjBhMDAwMjkwOWYwODUwZjU0YmJkYSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/view",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "view"]
+        }
+      }
+    },
+    {
+      "name": "Update Master",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJuYW1lIjoiVXBkYXRlZCBDYXRlZ29yeSIsIm9yZGVyIjoyLCJkZXNjcmlwdGlvbiI6IlVwZGF0ZWQgZGVzY3JpcHRpb24iLCJkcm9wZG93bl90eXBlIjoic3ViX2NhdGVnb3J5IiwiY2F0ZWdvcnlfaWQiOiI2N2YwYTAwMDI5MDlmMDg1MGY1NGJiZGEiLCJpc19kZWxldGVkIjowLCJzdGF0dXMiOjEsIm1vZGlmaWVkIjoiMjAyNS0wOS0yMVQwMDowMDowMC4wMDBaIn0=",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            },
+            {
+              "key": "icon_file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/update/67f0a0002909f0850f54bbda",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "update", "67f0a0002909f0850f54bbda"]
+        }
+      }
+    },
+    {
+      "name": "Delete Master Entry",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6IjY3ZjBhMDAwMjkwOWYwODUwZjU0YmJkYSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "delete"]
+        }
+      }
+    },
+    {
+      "name": "Get Subcategories by Category ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjYXRlZ29yeV9pZCI6IjY3ZjBhMDAwMjkwOWYwODUwZjU0YmJkYSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/subcategory",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "subcategory"]
+        }
+      }
+    },
+    {
+      "name": "Get Subcategories by Multiple Category IDs",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjYXRlZ29yeV9pZHMiOlsiNjdmMGEwMDAyOTA5ZjA4NTBmNTRiYmRhIiwiNjdmMGEwMDEyOTA5ZjA4NTBmNTRiYmRhIl19\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/master/getSubCategoryBasedOnCategory",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["master", "getSubCategoryBasedOnCategory"]
+        }
+      }
+    }
+  ]
+},
+
+{
+  "name": "Service Price",
+  "item": [
+    {
+      "name": "Add Service Price",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJzZXJ2aWNlSWQiOiI2N2YwYjAwMDI5MDlmMDg1MGY1NGJiZGEiLCJ1c2VySWQiOiI2N2YwYjAwMTI5MDlmMDg1MGY1NGJiZGEiLCJwcmljZSI6MTAwLCJkdXJhdGlvbiI6IjYwIG1pbnV0ZXMiLCJjcmVhdGVkX2F0IjoiMjAyNS0wOS0yMVQwMDowMDowMC4wMDBaIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/service-price",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service-price"]
+        }
+      }
+    },
+    {
+      "name": "Find Service Price by User & Service",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJzZXJ2aWNlSWQiOiI2N2YwYjAwMDI5MDlmMDg1MGY1NGJiZGEiLCJ1c2VySWQiOiI2N2YwYjAwMTI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/service-price/findById",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service-price", "findById"]
+        }
+      }
+    },
+    {
+      "name": "Get Service Price by Numeric ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/service-price/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service-price", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Service Price by Numeric ID",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/service-price/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service-price", "1"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "Service Type",
+  "item": [
+    {
+      "name": "Add Service Type",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJuYW1lIjoiSGFpckN1dCIsImRlc2NyaXB0aW9uIjoiUHJlbWl1bSBzdHlsaW5nIGFuZCBjdXQgc2VydmljZSIsImNyZWF0ZWRfYXQiOiIyMDI1LTA5LTIxVDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNS0wOS0yMVQwMDowMDowMC4wMDBaIn0=",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/service_type/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service_type", "add"]
+        }
+      }
+    },
+    {
+      "name": "Get All Service Types",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTB9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/service_type/getAll",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service_type", "getAll"]
+        }
+      }
+    },
+    {
+      "name": "View Service Type by ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2N2YwYjFkYzI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/service_type/view",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service_type", "view"]
+        }
+      }
+    },
+    {
+      "name": "Update Service Type",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJuYW1lIjoiSGFpckNvbG9yIiwiZGVzY3JpcHRpb24iOiJVcGRhdGVkIHN0eWxlIG9wdGlvbnMiLCJ1cGRhdGVkX2F0IjoiMjAyNS0wOS0yMVQwMDowMDowMC4wMDBaIn0=",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/service_type/update/67f0b1dc2909f0850f54bbda",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service_type", "update", "67f0b1dc2909f0850f54bbda"]
+        }
+      }
+    },
+    {
+      "name": "Delete Service Type",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2N2YwYjFkYzI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/service_type/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["service_type", "delete"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "Services Management",
+  "item": [
+    {
+      "name": "Add Service",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJuYW1lIjoiRmFjaWFsIFNwYSIsImRlc2NyaXB0aW9uIjoiRnVsbCBib2R5IHRyZWF0bWVudCBzZXJ2aWNlIiwicHJpY2UiOjE1MCwic2VydmljZV90eXBlIjoiNjdmMGM1ZmYyOTA5ZjA4NTBmNTRiYmRhIiwiY2VudGVySWQiOlsiNjdmMGM2MGYyOTA5ZjA4NTBmNTRiYmRhIl0sInJlc291cmNlIjpbIjY3ZjBjNjEyMjkwOWYwODUwZjU0YmJkYSJdLCJhZGRfb25zIjpbIjY3ZjBjNjEzMjkwOWYwODUwZjU0YmJkYSJdLCJsaXZlX3N0cmVhbSI6dHJ1ZSwibW9iaWxlX3NlcnZpY2UiOmZhbHNlLCJjbGVhbnVwX3RpbWUiOjMwLCJzaG93X29ubGluZSI6InNlcnZpY2UiLCJzdGF0dXMiOjEsImNyZWF0ZWRfYXQiOiIyMDI1LTA5LTIxVDAwOjAwOjAwWiIsInVwZGF0ZWRfYXQiOiIyMDI1LTA5LTIxVDAwOjAwOjAwWiIsImVtcGxveWVlRGF0YSI6W3sidXNlcklkIjoiNjdmMGM2MTQyOTA5ZjA4NTBmNTRiYmRhIiwicHJpY2UiOjE1MCwiZHVyYXRpb24iOiI2MCBtaW51dGVzIn1dfQ==",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "add"]
+        }
+      }
+    },
+    {
+      "name": "Get All Services",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJwYWdlIjoxLCJwYWdlU2l6ZSI6MTAsInNlcnZpY2VfdHlwZSI6IjY3ZjBjNWZmMjkwOWYwODUwZjU0YmJkYSIsImNlbnRlcklkIjoiNjdmMGM2MGYyOTA5ZjA4NTBmNTRiYmRhIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/getAll",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "getAll"]
+        }
+      }
+    },
+    {
+      "name": "View Service by ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2N2YwYzYyMjI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/view",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "view"]
+        }
+      }
+    },
+    {
+      "name": "Update Service",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "eyJuYW1lIjoiVXBkYXRlZCBGYWNpYWwgU3BhIiwiZGVzY3JpcHRpb24iOiJVcGRhdGVkIGRlc2MiLCJwcmljZSI6MjAwLCJzZXJ2aWNlX3R5cGUiOiI2N2YwYzVmZjI5MDlmMDg1MGY1NGJiZGEiLCJjZW50ZXJJZCI6WyI2N2YwYzYwZjI5MDlmMDg1MGY1NGJiZGEiXSwicmVzb3VyY2UiOlsiNjdmMGM2MTIyOTA5ZjA4NTBmNTRiYmRhIl0sImFkZF9vbnMiOlsiNjdmMGM2MTMyOTA5ZjA4NTBmNTRiYmRhIl0sImxpdmVfc3RyZWFtIjpmYWxzZSwibW9iaWxlX3NlcnZpY2UiOnRydWUsImNsZWFudXBfdGltZSI6NDAsInNob3dfb25saW5lIjoic2VydmljZV9hbmRfcHJpY2UiLCJzdGF0dXMiOjEsInVwZGF0ZWRfYXQiOiIyMDI1LTA5LTIxVDAwOjAwOjAwWiJ9",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/update/67f0c6222909f0850f54bbda",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "update", "67f0c6222909f0850f54bbda"]
+        }
+      }
+    },
+    {
+      "name": "Delete Service",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2N2YwYzYyMjI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "delete"]
+        }
+      }
+    },
+    {
+      "name": "Get Details For Service Create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJjZW50ZXJJZCI6ICI2N2YwYzYwZjI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/getDetailsForServiceCreate",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "getDetailsForServiceCreate"]
+        }
+      }
+    },
+    {
+      "name": "Get Service Duration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJzZXJ2aWNlSWQiOiAiNjdmMGM2MjIyOTA5ZjA4NTBmNTRiYmRhIiwiZW1wbG95ZWVJZCI6ICI2N2YwYzYxNDI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/getServiceDuration",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "getServiceDuration"]
+        }
+      }
+    },
+    {
+      "name": "Toggle Service Status",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/services_management/toggleStatus/67f0c6222909f0850f54bbda",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "toggleStatus", "67f0c6222909f0850f54bbda"]
+        }
+      }
+    },
+    {
+      "name": "Find Price By ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJzZXJ2aWNlSWQiOiAiNjdmMGM2MjIyOTA5ZjA4NTBmNTRiYmRhIiwidXNlcklkIjoiNjdmMGM2MTQyOTA5ZjA4NTBmNTRiYmRhIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/services_management/findPriceById",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["services_management", "findPriceById"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "User Management",
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJwYXNzd29yZCI6InRlc3RwYXNzIiwibW9iaWxlTm8iOiIxMjM0NTY3ODkwIiwiZG9iIjoiMTk5MC0wMS0wMSIsInJvbGUiOiJtZW1iZXIiLCJkYXRlIjoiMjAyNS0wOS0yMVQwMDowMDowMFoiLCJtb2RpZmllZCI6IjIwMjUtMDktMjFUMDA6MDA6MDBaIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "create"]
+        }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJwYXNzd29yZCI6InRlc3RwYXNzIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "login"]
+        }
+      }
+    },
+    {
+      "name": "Update Profile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VyX2lkIjoiNjdmMGM2MzIyOTA5ZjA4NTBmNTRiYmRhIiwibmFtZSI6IkpvaG4gVXBkYXRlZCIsImRldiI6IjE5ODUtMDEtMDEiLCJtb2JpbGVObyI6Ijk4NzY1NDMyMSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/updateProfile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "updateProfile"]
+        }
+      }
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Send OTP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJtb2JpbGVOdW1iZXIiOiIxMjM0NTY3ODkwIiwicmVxdWVzdEZvciI6InNpZ251cCJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/sendOtp",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "sendOtp"]
+        }
+      }
+    },
+    {
+      "name": "Send OTP For Password",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyZXF1ZXN0Rm9yIjoiY2hhbmdlUGFzc3dvcmQifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/sendOtpForPassword",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "sendOtpForPassword"]
+        }
+      }
+    },
+    {
+      "name": "Verify OTP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJvdHAiOiIxMjM0NSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/verifyOtp",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "verifyOtp"]
+        }
+      }
+    },
+    {
+      "name": "Change Password",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJwYXNzd29yZCI6Im5ld3Bhc3MiLCJjb25maXJtUGFzc3dvcmQiOiJuZXdwbGFuIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/changePassword",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "changePassword"]
+        }
+      }
+    },
+    {
+      "name": "Add Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VyX2lkIjoiNjdmMGM2MzIyOTA5ZjA4NTBmNTRiYmRhIiwibmFtZSI6IkpvaG4gRG9lIiwiZmxhdE5vIjoiMTAxIiwiYXJlYSI6Ik1haW4gU3RyZWV0IiwiY2l0eSI6Ik5ldyBZb3JrIiwic3RhdGUiOiJOYyIsInBpbmNvZGUiOiIxMDAwMSIsImNvdW50cnkiOiJVUyIsIm1vYmlsZSI6IjEyMzQ1Njc4OTAifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/add-address",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "add-address"]
+        }
+      }
+    },
+    {
+      "name": "Get All Addresses",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VyIjoiNjdmMGM2MzIyOTA5ZjA4NTBmNTRiYmRhIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/all-address",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "all-address"]
+        }
+      }
+    },
+    {
+      "name": "Delete Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJhZGRyZXNzSWQiOiI2N2YwYzYzMjI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/delete-address",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "delete-address"]
+        }
+      }
+    },
+    {
+      "name": "Edit Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6IjY3ZjBjNjMyMjkwOWYwODUwZjU0YmJkYSIsImNpdHkiOiJVcGRhdGVkIENpdHkiLCJzdGF0ZSI6Ik5ZX1VwZGF0ZWQifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/edit-address",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "edit-address"]
+        }
+      }
+    },
+    {
+      "name": "Set Primary Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJhZGRyZXNzX2lkIjoiNjdmMGM2MzIyOTA5ZjA4NTBmNTRiYmRhIiwidXNlcl9pZCI6IjY3ZjBjNjMyMjkwOWYwODUwZjU0YmJkYSJ9\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/users/setPrimary",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "setPrimary"]
+        }
+      }
+    },
+    {
+      "name": "Get Members",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/users/members",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["users", "members"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "User Family API",
+  "item": [
+    {
+      "name": "Create User Family Member",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VySWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNWEiLCAicmVsYXRpb24iOiAiYnJvdGhlciIsICJlbWFpbCI6ICJyb2huQGV4YW1wbGUuY29tIiwgInBob25lIjogOTg3NjU0MzIxMCwgImZpcnN0TmFtZSI6ICJSb2huIiwgImxhc3ROYW1lIjogIkRvZSIsICJnZW5kZXIiOiAibWFsZSIsICJjcmVhdGVkQXQiOiAiMjAyNS0wOS0yMVQwMDowMDowMC4wMDBaIn0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/user-family/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["user-family", "create"]
+        }
+      }
+    },
+    {
+      "name": "Find User Family Members by User ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJ1c2VySWQiOiAiNjUwZjdkOGQ5YTNlMWIxMjM0NTY3ODkwNWEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/user-family/find",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["user-family", "find"]
+        }
+      }
+    }
+  ]
+},
+{
+  "name": "Waitlist API",
+  "item": [
+    {
+      "name": "Add Waitlist Entry",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJkYXRhIjp7IndhaXRsaXN0RGF0YSI6W3sic2VydmljZUlkIjoiNjdmMGM2MjIyOTA5ZjA4NTBmNTRiYmRhIiwiZW1wbG95ZWVJZCI6IjY3ZjBjNjE0MjkwOWYwODUwZjU0YmJkYSIsInVzZXJJZCI6IjY3ZjBjNjEzMjkwOWYwODUwZjU0YmJkYSIsInRpbWUiOiIxMDowMCIsImRhdGUiOiIyMDI1LTA5LTIyIn1dfX0=\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/waitlist/addWaitlist",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["waitlist", "addWaitlist"]
+        }
+      }
+    },
+    {
+      "name": "Get Waitlist by User ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2N2YwYzYxMzI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/waitlist/user",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["waitlist", "user"]
+        }
+      }
+    },
+    {
+      "name": "Delete Waitlist Entry",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"data\": \"eyJpZCI6ICI2N2YwYzYyMjI5MDlmMDg1MGY1NGJiZGEifQ==\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/waitlist/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["waitlist", "delete"]
+        }
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+}
